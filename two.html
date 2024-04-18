@@ -6,7 +6,7 @@
     <script src="p5.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script>
-      //Global Variables
+      //global variables
       //==================
 
       var gameChar_x;
@@ -370,8 +370,7 @@
                      {pos_x: 1300, width:100},
                      {pos_x: 1700, width:110},
                      {pos_x: 2100, width:100},
-                     {pos_x: 2300, width:100},
-                     {pos_x: 2500, width:110}
+                     {pos_x: 2300, width:100}
                     ];
 
 
@@ -388,7 +387,6 @@
           platforms.push(CreatePlatforms(width+580,floorPos_y-100,80));
           platforms.push(CreatePlatforms(width+680,floorPos_y-180,80));
           platforms.push(CreatePlatforms(width+780,floorPos_y-260,80));
-
 
           enemies = [ new Traps(createVector(width/2 +600 ,floorPos_y+30),  2 * PI),
                       new Traps(createVector(width +720 ,floorPos_y-167),  2 * PI),
@@ -722,7 +720,7 @@
              rect(t_canyon.pos_x+50,floorPos_y,t_canyon.width,200);
              fill(0, 150, 0) // Green colour for Grass Patches
              rect(t_canyon.pos_x+25,floorPos_y, 31, 15, 5);
-            fill(101, 67, 33)c; // Brown Soil
+            fill(101, 67, 33); // Brown Soil
             rect(t_canyon.pos_x+150, floorPos_y, 25, height/4, 3);
             fill(0, 120, 0); // shadow
             rect(t_canyon.pos_x+145, floorPos_y, 35 , 15, 4);
