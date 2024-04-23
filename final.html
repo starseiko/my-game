@@ -2,7 +2,7 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Escape</title>
+     <title>Mr. Bartholomew's Adventure</title>
     <script src="p5.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script>
@@ -73,7 +73,7 @@
           StageClearSound = loadSound('assets/FlagPoleReached.wav')   // Load Stage Clear Sound
           StageClearSound.setVolume(0.5);
 
-          GameBGM = loadSound('assets/GameBGM1.wav'); // Game Background Music
+          GameBGM = loadSound('assets/sunrise.mp3'); // Game Background Music
           GameBGM.setVolume(0.2);
 
           GuillotineSound = loadSound('assets/Blade.mp3'); // Load Blade Sound when cuts Player
@@ -306,7 +306,7 @@
                   text_blink =! text_blink;
               }
               pop();
-              location.href = "two.html"
+              location.href = "theend.html"
 
           }
       }
@@ -374,11 +374,13 @@
                      {pos_x: 310, width:100},
                      {pos_x: 1000, width:100},       // CANYONS ARRAY
                      {pos_x: 1300, width:100},
-                     {pos_x: 1700, width:110}
+                     {pos_x: 1700, width:110},
+                     {pos_x: 2300, width:115},
+                     {pos_x: 2800, width:110}
                     ];
 
 
-          flagPole = {isReached: false,x_pos: 3500}; // FLAGPOLE
+          flagPole = {isReached: false,x_pos: 3200}; // FLAGPOLE
           
 
           platforms = [];                               // PLATFORMS ARRAY
@@ -392,9 +394,11 @@
           platforms.push(CreatePlatforms(width+580,floorPos_y-100,80));
           platforms.push(CreatePlatforms(width+680,floorPos_y-180,80));
           platforms.push(CreatePlatforms(width+780,floorPos_y-260,80));
+          platforms.push(CreatePlatforms(width+980,floorPos_y-240,80));
 
           enemies = [ new Traps(createVector(width/2 +600 ,floorPos_y+30),  2 * PI),
                       new Traps(createVector(width +720 ,floorPos_y-167),  2 * PI),
+                      new Traps(createVector(width+1030 ,floorPos_y+-5),  2 * PI),
                       new Traps(createVector(width/2 -770 ,floorPos_y-108),  2 * PI),
                        new Traps(createVector(-width+160 ,floorPos_y+30),  2 * PI),
                       new Traps(createVector(-width-200 ,floorPos_y+30),  2 * PI)];          // ENEMIES ARRAY
