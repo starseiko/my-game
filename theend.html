@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <div class="narration">Mr. Bartholomew found his love and they lived happily ever after. Thank you for playing!</div>
     <link href="style.css" rel="stylesheet" type="text/css" />
      <title>Mr. Bartholomew's Adventure</title>
     <style>
@@ -10,6 +11,38 @@
         overflow: hidden;
         background-color: #11111f;
       }
+      .play{
+            font-size:14px;
+      font-weight:600;
+            text-align:center;
+            width:140px;
+            opacity:.5;
+            text-decoration:none;
+            padding: 4px;
+            border-radius:5px;
+            cursor:pointer;
+            color:#fff;
+            height: 24px;
+            line-height:24px;
+            background: #292929;
+            position: fixed;
+            bottom:20px;
+            left: 20px;
+            z-index: 1000;
+            transition:.2s;
+        }
+        .play:hover{
+            opacity: 1.03;
+      scale:1.1;
+      color:#f60;
+        }
     </style>
+    <script>
+      var audio = new Audio('the_end.mp3');
+      audio.play();
+    </script>
+    <a href="index.html" class="play">Play Again</a>
+    <img src="assets/princess.png" class="center">
+    <audio src="audio.mp3">
   </head>
 </html>
